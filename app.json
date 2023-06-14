@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Ispmedia",
+    "slug": "Ispmedia",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
