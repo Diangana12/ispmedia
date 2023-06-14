@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, FlatList }
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import BottomNav from '../components/BottomNav.jsx';
-import { getUser } from '../request/usuario.jsx';
+import { createUser, getUser } from '../request/usuario.jsx';
 import { getMostPlayed } from '../request/most-played.jsx';
 import { getMadeForYou } from '../request/made-for-you.jsx';
 import { getUpcomingArtists } from '../request/upcoming-artists.jsx';
@@ -10,9 +10,10 @@ import { getNewReleases } from '../request/new-releases.jsx';
 
 const profileImage = require('../assets/artist.webp');
 
-export default function MusicPage() {
+export default function MusicPage({ route }) {
 
     const navigation = useNavigation();
+    const { username } = route.params
 
     const renderHorizontalItem = ({ item, sectionTitle }) => (
         <View style={styles.horizontalItem}>
@@ -21,21 +22,19 @@ export default function MusicPage() {
             {item.name && <Text style={styles.horizontalArtist}>{item.name}</Text>}
         </View>
     );
-
-        const usuarios = getUser();
         const mostPlayedData = getMostPlayed();
         const madeForYouData = getMadeForYou();
         const newReleasesData = getNewReleases();
         const upcomingArtistsData = getUpcomingArtists();
 
-    if(usuarios !== null) {
+    if(username !== null) {
 
         return (
 
             <View style={styles.container}>
 
                 <View style={styles.header}>
-                    <Text style={styles.label}>Olá, {usuarios.nome}!</Text>
+                    <Text style={styles.label}>Olá, {JSON.stringify(username)}!</Text>
     
                     <Image source={profileImage} style={styles.profileImage} />
     

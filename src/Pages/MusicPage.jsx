@@ -114,6 +114,7 @@ export default function MusicPage() {
         <View style={styles.shareView}>
           <Ionicons name="download-outline" size={30} color="pink" style={styles.share} />
           <Ionicons name="share-social-outline" size={30} color="pink" style={styles.download} />
+          <Ionicons name="heart-outline" size={30} color="pink" style={[styles.like, { marginTop: -10 }]} />
         </View>
 
         <Slider

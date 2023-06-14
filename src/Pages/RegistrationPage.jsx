@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { createUser } from "../request/usuario";
 
 const musicLogo = require('../assets/logo.jpg');
 
@@ -17,21 +18,21 @@ export default function RegistrationPage() {
         navigation.navigate("LoginPage");
     }
 
-    const handleRegistration = () => {
-
-        /*if (!validateEmail(email)) {
-            alert('Formato de e-mail inválido. Por favor introduza um e-mail do formato ISPTEC.');
-            return;
-        }*/
-
-        navigation.navigate("Home");
-    };
-
     const validateEmail = (email) => {
         const emailRegex = /^(19|20)\d{6}@isptec.co.ao$/;
         return emailRegex.test(email);
+    };
 
-
+    const handleRegistration = () => {
+        const user = {
+            email: email,
+            senha: password,
+            nome: name,
+            sobrenome: surname
+        };
+        !validateEmail(email) ? alert("Email invalido") : createUser(user)
+        .then(alert("Usuario criado com sucesso!"))
+        .finally(handleLogin())
     };
 
     return (

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet, Image, TextInput, SafeAreaView, TouchableOpacity, Text } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+import { getUser } from "../request/usuario";
 
 const musicLogo = require('../assets/logo.jpg');
 const musicCover = require('../assets/cover.jpeg');
@@ -9,9 +10,14 @@ const musicCover = require('../assets/cover.jpeg');
 export default function BottomNav() {
 
     const navigation = useNavigation();
+    const login = getUser();
 
     function goHome() {
-        navigation.navigate("Home");
+        login.forEach((user) => {
+            navigation.navigate("Home", {
+                username: user.nome,
+            })
+        })
     }
 
     function radioPage() {

@@ -1,69 +1,207 @@
-{ 
-   "usuarios" : [
 {
-    "id":1, "nome":"Diangana", "email":"email1", "senha":"abcd"
-}], 
-
- "mostPlayed": [
-    { "id": 1, "title": "Familiar", "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498" },
-    { "id": 2, "title": "Song 2", "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900" },
-    { "id": 3, "title": "Song 3", "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900" },
-    { "id": 4, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
-    { "id": 5, "title": "Song 3", "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900" }
-
-],
-
-"madeForYou": [
-    { "id": 1, "title": "Familiar", "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498" },
-    { "id": 2, "title": "Song 2", "cover": "https://cdn.dribbble.com/users/821520/screenshots/9251310/media/fd94b27a57df9804f564018ce716170f.png?compress=1&resize=1000x750&vertical=center" },
-    { "id": 3, "title": "Song 3", "cover": "https://cdn.dribbble.com/users/821520/screenshots/9251310/media/fd94b27a57df9804f564018ce716170f.png?compress=1&resize=1000x750&vertical=center" },
-    { "id": 4, "title": "Song 3", "cover": "https://cdn.dribbble.com/users/821520/screenshots/9251310/media/fd94b27a57df9804f564018ce716170f.png?compress=1&resize=1000x750&vertical=center" },
-    { "id": 5, "title": "Song 3", "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498" }
-],
-
-"upcomingArtists": [
-    { "id": 1, "title": "Familiar", "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900" },
-    { "id": 2, "title": "Song 2", "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg" },
-    { "id": 3, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
-    { "id": 4, "title": "Song 3", "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498" },
-    { "id": 5, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" }
-],
-
-"newReleases": [
-    { "id": 1, "title": "Familiar", "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
-    { "id": 2, "title": "Song 2",  "name": "Artist 10", "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg" },
-    { "id": 3, "title": "Song 3",  "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
-    { "id": 4, "title": "Song 3",  "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
-    { "id": 5, "title": "Song 3",  "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" }
-],
-
-"playlist":[{
-    "playlist_id":"", "nome_playlist":"", "user_id":""
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Diangana",
+      "email": "email1",
+      "senha": "abcd"
+    },
+    {
+      "nome": "Diangana3",
+      "email": "dkka",
+      "senha": "kef",
+      "id": 2
+    },
+    {
+      "nome": "Diangana3",
+      "email": "dkka",
+      "senha": "kef",
+      "id": 3
+    },
+    {
+      "nome": "Diangana3",
+      "email": "dkka",
+      "senha": "kef",
+      "id": 4
+    },
+    {
+      "nome": "Diangana3",
+      "email": "dkka",
+      "senha": "kef",
+      "id": 5
+    },
+    {
+      "email": "20190440@isptec.co.ao",
+      "senha": "3333",
+      "nome": "D",
+      "sobrenome": "G",
+      "id": 6
+    },
+    {
+      "email": "20190442@isptec.co.ao ",
+      "senha": "1234",
+      "nome": "Qw",
+      "sobrenome": "Ty",
+      "id": 7
+    },
+    {
+      "email": "Vesquinhojose12@gmail.com ",
+      "senha": "ethfs",
+      "nome": "Ry",
+      "sobrenome": "Sf",
+      "id": 8
+    },
+    {
+      "email": "20190442@isptec.co.ao",
+      "senha": "qqqq",
+      "nome": "Ssra",
+      "sobrenome": "Pp",
+      "id": 9
+    }
+  ],
+  "mostPlayed": [
+    {
+      "id": 1,
+      "title": "Familiar",
+      "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498"
+    },
+    {
+      "id": 2,
+      "title": "Song 2",
+      "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900"
+    },
+    {
+      "id": 3,
+      "title": "Song 3",
+      "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900"
+    },
+    {
+      "id": 4,
+      "title": "Song 3",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 5,
+      "title": "Song 3",
+      "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900"
+    }
+  ],
+  "madeForYou": [
+    {
+      "id": 1,
+      "title": "Familiar",
+      "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498"
+    },
+    {
+      "id": 2,
+      "title": "Song 2",
+      "cover": "https://cdn.dribbble.com/users/821520/screenshots/9251310/media/fd94b27a57df9804f564018ce716170f.png?compress=1&resize=1000x750&vertical=center"
+    },
+    {
+      "id": 3,
+      "title": "Song 3",
+      "cover": "https://cdn.dribbble.com/users/821520/screenshots/9251310/media/fd94b27a57df9804f564018ce716170f.png?compress=1&resize=1000x750&vertical=center"
+    },
+    {
+      "id": 4,
+      "title": "Song 3",
+      "cover": "https://cdn.dribbble.com/users/821520/screenshots/9251310/media/fd94b27a57df9804f564018ce716170f.png?compress=1&resize=1000x750&vertical=center"
+    },
+    {
+      "id": 5,
+      "title": "Song 3",
+      "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498"
+    }
+  ],
+  "upcomingArtists": [
+    {
+      "id": 1,
+      "title": "Familiar",
+      "cover": "https://img.freepik.com/vetores-premium/maquete-de-disco-de-vinil-realista-na-capa-do-album-de-musica-em-branco-vazio-isolada-no-fundo-branco-retro-musical-long-play-em-caixa-de-papel-modelo-branco-ilustracao-vetorial-3d_341509-1731.jpg?w=900"
+    },
+    {
+      "id": 2,
+      "title": "Song 2",
+      "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Song 3",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 4,
+      "title": "Song 3",
+      "cover": "https://img.freepik.com/vetores-gratis/fone-de-ouvido-com-linha-de-onda-de-musica-com-formas-de-movimento-de-nota-de-musica-padrao-para-decoracao-de-banner-de-cartaz-de-design-de-capa_460848-15097.jpg?w=360&t=st=1686759518~exp=1686760118~hmac=1fb7068e47c00088d6e85061aaaff50a5b1d745592c5b9c85108c561d41f4498"
+    },
+    {
+      "id": 5,
+      "title": "Song 3",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    }
+  ],
+  "newReleases": [
+    {
+      "id": 1,
+      "title": "Familiar",
+      "name": "Artist 10",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 2,
+      "title": "Song 2",
+      "name": "Artist 10",
+      "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Song 3",
+      "name": "Artist 10",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 4,
+      "title": "Song 3",
+      "name": "Artist 10",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 5,
+      "title": "Song 3",
+      "name": "Artist 10",
+      "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0"
+    }
+  ],
+  "playlist": [
+    {
+      "playlist_id": "",
+      "nome_playlist": "",
+      "user_id": ""
+    }
+  ],
+  "midia_na_playlist": [
+    {
+      "playlist_media_id": "",
+      "playlist_id": "",
+      "media_id": ""
+    }
+  ],
+  "comentario": [
+    {
+      "comentario_id": "",
+      "conteudo": "",
+      "data_publicacao": "",
+      "user_id": "",
+      "media_id": ""
+    }
+  ],
+  "avaliacoes": [
+    {
+      "avaliacao_id": "",
+      "valor": "",
+      "data_avaliacao": "",
+      "user_id": "",
+      "media_id": ""
+    }
+  ]
 }
-
-],
-
-"midia_na_playlist":[{
-    "playlist_media_id":"", "playlist_id":"", "media_id":""
-}
-
-],
-
-"comentario":[{
-    "comentario_id":"", "conteudo":"", "data_publicacao":"", "user_id":"", "media_id":""
-    
-}
-
-],
-
-"avaliacoes":[{
-    "avaliacao_id":"", "valor":"", "data_avaliacao":"", "user_id":"","media_id":""
-    
-}
-
-]
-
-
-
-}
-

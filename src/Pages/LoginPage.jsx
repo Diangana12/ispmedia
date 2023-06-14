@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Image, TextInput, SafeAreaView, TouchableOpacity, Text } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import { getUser } from "../request/usuario";
 
 const musicLogo = require('../assets/logo.jpg');
 
@@ -11,8 +12,14 @@ export default function LoginPage() {
 
     const navigation = useNavigation();
 
-    function handleSubmit() {
-        navigation.navigate("Home");
+    const login = getUser();
+
+    const handleSubmit = () => {
+        login.forEach((user) => {
+            user.email === email && user.senha === password ? navigation.navigate("Home", {
+                username: user.nome,
+            }) : console.log("Errado")
+        })
     }
 
     function handleRegistration() {

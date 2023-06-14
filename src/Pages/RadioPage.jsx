@@ -1,92 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+//import { useAudioPlayer } from 'react-use-audio-player';
 import { Audio } from 'expo-av';
 import BottomNav from '../components/BottomNav';
 
 const profileImage = require('../assets/artist.webp');
 
-const RadioPage = () => {
+const RadioPage = () => { 
+
+  const [sound, setSound] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [soundObject, setSoundObject] = useState(null);
 
   useEffect(() => {
-    setupPlayer();
+    const loadAudio = async () => {
+      try {
+        const { sound } = await Audio.Sound.createAsync(
+          { uri: 'https://radios.vpn.sapo.pt/AO/radio1.mp3' },
+          { shouldPlay: false }
+        );
+        setSound(sound);
+      } catch (error) {
+        console.error('Error loading audio:', error);
+      }
+    };
+
+    loadAudio();
 
     return () => {
-      cleanupPlayer();
+      if (sound) {
+        sound.unloadAsync();
+      }
     };
   }, []);
 
-  const setupPlayer = async () => {
-    try {
-      const { sound } = await Audio.Sound.createAsync(
-        { uri: 'https://live.wostreaming.net/direct/townsquare-wdksfmmp3-ibc3.mp3' },
-        { shouldPlay: false },
-        onPlaybackStatusUpdate
-      );
-      setSoundObject(sound);
-    } catch (error) {
-      console.log('Error setting up player:', error);
-    }
-  };
-
-  const onPlaybackStatusUpdate = (status) => {
-    if (!status.isLoaded) {
-      // Handle error when audio fails to load
-      console.log('Error loading audio:', status.error);
-    } else {
-      setIsPlaying(status.isPlaying);
-    }
-  };
-
-  const cleanupPlayer = async () => {
-    try {
-      if (soundObject) {
-        await soundObject.unloadAsync();
-        setSoundObject(null);
-      }
-    } catch (error) {
-      console.log('Error cleaning up player:', error);
-    }
-  };
-
-  const togglePlayback = async () => {
-    try {
-      if (soundObject) {
-        if (isPlaying) {
-          await soundObject.pauseAsync();
-        } else {
-          await soundObject.playAsync();
-        }
-        setIsPlaying(!isPlaying);
+  const handlePlayPause = async () => {
+    if (sound) {
+      if (isPlaying) {
+        await sound.pauseAsync();
       } else {
-        console.log('Sound object is not yet set');
+        await sound.playAsync();
       }
-    } catch (error) {
-      console.log('Error toggling playback:', error);
+      setIsPlaying(!isPlaying);
     }
   };
 
+return (
+  <View style={styles.container}>
 
-  return (
-    <View style={styles.container}>
-
-      <View style={styles.header}>
-        <Text style={styles.label}>Radio</Text>
-        <Image source={profileImage} style={styles.profileImage} />
-      </View>
-      <TouchableOpacity
-        style={styles.playButton}
-        onPress={togglePlayback}
-      >
+    <View style={styles.header}>
+      <Text style={styles.label}>Radio</Text>
+      <Image source={profileImage} style={styles.profileImage} />
+    </View>
+    <TouchableOpacity style={styles.playButton} onPress={handlePlayPause}>
         <Text style={styles.playButtonText}>
           {isPlaying ? 'Pause' : 'Play'}
         </Text>
       </TouchableOpacity>
 
-      <BottomNav></BottomNav>
-    </View>
-  );
+    <BottomNav></BottomNav>
+  </View>
+);
 };
 
 export default RadioPage;
