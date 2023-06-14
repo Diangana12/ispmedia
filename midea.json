@@ -1,0 +1,69 @@
+{ 
+   "usuarios" : [
+{
+    "id":1, "nome":"Diangana", "email":"email1", "senha":"abcd"
+}], 
+
+ "mostPlayed": [
+    { "id": 1, "title": "Familiar", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 2, "title": "Song 2", "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg" },
+    { "id": 3, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 4, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 5, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" }
+
+],
+
+"madeForYou": [
+    { "id": 1, "title": "Familiar", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 2, "title": "Song 2", "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg" },
+    { "id": 3, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 4, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 5, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" }
+],
+
+"upcomingArtists": [
+    { "id": 1, "title": "Familiar", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 2, "title": "Song 2", "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg" },
+    { "id": 3, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 4, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 5, "title": "Song 3", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" }
+],
+
+"newReleases": [
+    { "id": 1, "title": "Familiar", "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 2, "title": "Song 2",  "name": "Artist 10", "cover": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9e5fb838292485.57697f49c339e.jpg" },
+    { "id": 3, "title": "Song 3",  "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 4, "title": "Song 3",  "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" },
+    { "id": 5, "title": "Song 3",  "name": "Artist 10", "cover": "https://th.bing.com/th/id/R.92f30e8da6f7e6f6b2b64550d683639d?rik=wnZNz%2bNmQsO9zQ&pid=ImgRaw&r=0" }
+],
+
+"playlist":[{
+    "playlist_id":"", "nome_playlist":"", "user_id":""
+}
+
+],
+
+"midia_na_playlist":[{
+    "playlist_media_id":"", "playlist_id":"", "media_id":""
+}
+
+],
+
+"comentario":[{
+    "comentario_id":"", "conteudo":"", "data_publicacao":"", "user_id":"", "media_id":""
+    
+}
+
+],
+
+"avaliacoes":[{
+    "avaliacao_id":"", "valor":"", "data_avaliacao":"", "user_id":"","media_id":""
+    
+}
+
+]
+
+
+
+}
+
