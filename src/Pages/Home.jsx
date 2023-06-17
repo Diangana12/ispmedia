@@ -7,100 +7,111 @@ import { getMostPlayed } from '../request/most-played.jsx';
 import { getMadeForYou } from '../request/made-for-you.jsx';
 import { getUpcomingArtists } from '../request/upcoming-artists.jsx';
 import { getNewReleases } from '../request/new-releases.jsx';
+import { useAuth } from "../contexts/auth.jsx";
 
-const profileImage = require('../assets/artist.webp');
+const profileImage = require("../assets/artist.webp");
 
-export default function MusicPage({ route }) {
+export default function MusicPage() {
+  const navigation = useNavigation();
 
-    const navigation = useNavigation();
-    const { username } = route.params
+  const { signOut, user } = useAuth();
+  function handleSignOut() {
+    signOut();
+  }
 
-    const renderHorizontalItem = ({ item, sectionTitle }) => (
-        <View style={styles.horizontalItem}>
-            <Image source={{uri: item.cover}} style={sectionTitle === 'Upcoming Artists' ? styles.circularCover : styles.rectangularCover} />
-            <Text style={styles.horizontalTitle}>{item.title}</Text>
-            {item.name && <Text style={styles.horizontalArtist}>{item.name}</Text>}
-        </View>
-    );
-        const mostPlayedData = getMostPlayed();
-        const madeForYouData = getMadeForYou();
-        const newReleasesData = getNewReleases();
-        const upcomingArtistsData = getUpcomingArtists();
+  const renderHorizontalItem = ({ item, sectionTitle }) => (
+    <View style={styles.horizontalItem}>
+      <TouchableOpacity onPress={handleSignOut}>
+        <Image
+          source={{ uri: item.cover }}
+          style={
+            sectionTitle === "Upcoming Artists"
+              ? styles.circularCover
+              : styles.rectangularCover
+          }
+        />
+      </TouchableOpacity>
+      <Text style={styles.horizontalTitle}>{item.title}</Text>
+      {item.name && <Text style={styles.horizontalArtist}>{item.name}</Text>}
+    </View>
+  );
+  const mostPlayedData = getMostPlayed();
+  const madeForYouData = getMadeForYou();
+  const newReleasesData = getNewReleases();
+  const upcomingArtistsData = getUpcomingArtists();
 
-    if(username !== null) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.label}>Olá, {user?.name}!</Text>
 
-        return (
+        <Image source={profileImage} style={styles.profileImage} />
 
-            <View style={styles.container}>
+        <TouchableOpacity>
+          <Ionicons
+            style={styles.iconSearch}
+            name="search-outline"
+            size={30}
+            color="black"
+          />
+        </TouchableOpacity>
+      </View>
 
-                <View style={styles.header}>
-                    <Text style={styles.label}>Olá, {JSON.stringify(username)}!</Text>
-    
-                    <Image source={profileImage} style={styles.profileImage} />
-    
-                    <TouchableOpacity>
-                        <Ionicons style={styles.iconSearch} name="search-outline" size={30} color="black" />
-                    </TouchableOpacity>
-                </View>
-    
-                <ScrollView style={styles.scrollContainer}>
-    
-                    <Text style={styles.sectionTitle}>New Releases</Text>
-                    <FlatList
-                        data={newReleasesData}
-                        renderItem={renderHorizontalItem}
-                        keyExtractor={(item) => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                    />
-    
-                    <Text style={styles.sectionTitle}>Favorites</Text>
-                    <FlatList
-                        data={newReleasesData}
-                        renderItem={renderHorizontalItem}
-                        keyExtractor={(item) => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                    />
-    
-                    <Text style={styles.sectionTitle}>Upcoming Artists</Text>
-                    <FlatList
-                        data={upcomingArtistsData}
-                        renderItem={({ item }) => renderHorizontalItem({ item, sectionTitle: 'Upcoming Artists' })}
-                        keyExtractor={(item) => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                    />
-    
-                    <Text style={styles.sectionTitle}>Most Played</Text>
-                    <FlatList
-                        data={mostPlayedData}
-                        renderItem={({ item }) => renderHorizontalItem({ item, sectionTitle: 'Most Played' })}
-                        keyExtractor={(item) => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                    />
-    
-                    <Text style={styles.sectionTitle}>Made for You</Text>
-                    <FlatList
-                        data={madeForYouData}
-                        renderItem={renderHorizontalItem}
-                        keyExtractor={(item) => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                    />
-    
-                </ScrollView>
-    
-                <BottomNav></BottomNav>
-                                                                                                  
-            </View>
-    
-        );
-    }
-    
+      <ScrollView style={styles.scrollContainer}>
+        <Text style={styles.sectionTitle}>New Releases</Text>
+        <FlatList
+          data={newReleasesData}
+          renderItem={renderHorizontalItem}
+          keyExtractor={(item) => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
 
-};
+        <Text style={styles.sectionTitle}>Favorites</Text>
+        <FlatList
+          data={newReleasesData}
+          renderItem={renderHorizontalItem}
+          keyExtractor={(item) => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
+
+        <Text style={styles.sectionTitle}>Upcoming Artists</Text>
+        <FlatList
+          data={upcomingArtistsData}
+          renderItem={({ item }) =>
+            renderHorizontalItem({ item, sectionTitle: "Upcoming Artists" })
+          }
+          keyExtractor={(item) => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
+
+        <Text style={styles.sectionTitle}>Most Played</Text>
+        <FlatList
+          data={mostPlayedData}
+          renderItem={({ item }) =>
+            renderHorizontalItem({ item, sectionTitle: "Most Played" })
+          }
+          keyExtractor={(item) => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
+
+        <Text style={styles.sectionTitle}>Made for You</Text>
+        <FlatList
+          data={madeForYouData}
+          renderItem={renderHorizontalItem}
+          keyExtractor={(item) => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
+      </ScrollView>
+
+      <BottomNav></BottomNav>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
     container: {
