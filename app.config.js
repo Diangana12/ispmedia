@@ -1,6 +1,6 @@
 export default {
-    // Other configuration options
-    extra: {
-      API_ENDPOINT: 'http://192.168.1.5:3000'
-    }
-  };
+  // Other configuration options
+  extra: {
+    API_ENDPOINT: "http://192.168.1.10:3000",
+  },
+};

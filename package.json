@@ -6,7 +6,7 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "midea": "json-server --host 192.168.1.5 --watch midea.json",
+    "midea": "json-server --host 192.168.1.10 --watch midea.json",
     "web": "expo start --web"
   },
   "dependencies": {
